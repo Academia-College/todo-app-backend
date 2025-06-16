@@ -1,0 +1,22 @@
+{
+  "name": "todo_backend",
+  "version": "1.0.0",
+  "description": "### Project Setup",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./dist/index.js",
+    "build": "rimraf ./dist && tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "rimraf": "^6.0.1"
+  }
+}
