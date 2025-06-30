@@ -1,27 +1,22 @@
 import { Router } from "express";
+import {
+  completeNote,
+  createNote,
+  deleteNote,
+  getAllNotes,
+  updateNote,
+} from "../../controllers/notes";
 
 const router = Router();
 
-router.post('/create', (req, res) => {
-    const note = req.body.note;
-    res.send(note);
-});
+router.post("/create", createNote);
 
-router.get('/getAll', (req, res) => {
-    res.send('get all');
-});
+router.get("/getAll", getAllNotes);
 
-router.delete('/delete/:id', (req, res) => {
-    const id = req.params.id;
-    res.send(`Deleting note with ID: ${id}`);
-});
+router.delete("/delete/:id", deleteNote);
 
-router.put('/update/:id', (req, res) => {
-    res.send('Hello, World!');
-});
+router.put("/update/:id", updateNote);
 
-router.get('/complete/:id', (req, res) => {
-    res.send('Hello, World!');
-});
+router.get("/complete/:id", completeNote);
 
 export default router;
